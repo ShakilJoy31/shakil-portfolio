@@ -1,0 +1,39 @@
+.button{
+    background: white;
+    color: black;
+    border-radius: 5px;
+    transition-duration: 800ms;
+}
+.button:hover{
+    background: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 200ms;
+    border: 1px solid white;
+}
+
+.blogButton {
+    background: rgba(0, 0, 0, 0.358);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px 5px white;
+    transition-duration: 200ms;
+  }
+  
+  .blogButton:hover {
+    background: white;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px 5px black;
+    transition-duration: 200ms;
+  }
+
+  .contactFormBackgroundColor{
+    background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(34, 15, 130, 0.62) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border: 1px solid white;
+  }
