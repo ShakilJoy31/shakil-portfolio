@@ -22,7 +22,7 @@ export default function Home() {
         <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center pt-[400px] md:pt-0 lg:pt-0 xl:pt-0">
           <h1 className="text-4xl md:text-6xl font-bold w-full flex justify-start">Shakidul Islam Shakil</h1>
 
-          <p className="text-slate-300">"Hi! I`&apos;`m Shakidul Islam Shakil, a web developer passionate about crafting digital experiences. I began as an intern at Kylo Apps, mastering full-stack development. After a year, I joined Translanse Pvt Ltd as a front-end developer. I`&apos;`m dedicated to staying updated on the latest web technologies to bring fresh ideas. Thriving in fast-paced environments, I enjoy putting my skills to the test. Let`&apos;`s work together to create something amazing!"</p>
+          <p className="text-slate-300">Hi! I`&apos;`m Shakidul Islam Shakil, a web developer passionate about crafting digital experiences. I began as an intern at Kylo Apps, mastering full-stack development. After a year, I joined Translanse Pvt Ltd as a front-end developer. I`&apos;`m dedicated to staying updated on the latest web technologies to bring fresh ideas. Thriving in fast-paced environments, I enjoy putting my skills to the test. Let`&apos;`s work together to create something amazing!</p>
           <div className="flex gap-4 flex-start w-full">
             <Link href="/portfolio" className="px-4 py-2 rounded-sm ring-black border border-white">Checkout my work</Link>
             <Link href="/contact" className="px-4 py-2 rounded-sm ring-black bg-white text-black">Contact with me</Link>
