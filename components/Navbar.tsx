@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { BsFacebook } from "react-icons/bs";
 import { CgLayoutGrid } from "react-icons/cg";
@@ -78,12 +78,13 @@ const Navbar = () => {
         }
 
     }
+    const router = useRouter();
     return (<div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
         <div className="hidden md:flex items-center gap-4 w-1/3">
             {
                 links.map((link, index) => {
                     return (
-                        <div  key={index} className={`${link.url === pathname ? "bg-black text-white rounded-md px-4 py-1" : ""}`}>
+                        <div key={index} className={`${link.url === pathname ? "bg-black text-white rounded-md px-4 py-1" : ""}`}>
                             <Link href={link.url}>
                                 {link.title}
                             </Link>
@@ -106,21 +107,21 @@ const Navbar = () => {
             </div></a>
 
             {/* Whatsapp */}
-            <a target='_blank' href="https://wa.me/message/6CPDT6OUH2SJL1"><div>
+            <a target='_blank' href="https://api.whatsapp.com/send/?phone=%2B8801761043883&text&type=phone_number&app_absent=0"><div>
                 <span className='flex items-center justify-center mt-1'><IoLogoWhatsapp size={25}></IoLogoWhatsapp></span>
             </div></a>
 
             {/* Facebook */}
-            <a target='_blank' href="https://www.facebook.com/beeraw23"><div>
+            <a target='_blank' href="https://www.facebook.com/shakil.ahammedjoy.39/"><div>
                 <span className='flex items-center justify-center mt-1'><FaFacebook size={25}></FaFacebook></span>
             </div></a>
 
             {/* Messenger */}
-            <a target='_blank' href="https://www.messenger.com/t/101277466406447"><div>
+            <a target='_blank' href="https://www.linkedin.com/in/shakidul-islam-shakil-537696219/"><div>
                 <span className='flex items-center justify-center mt-1'><FaLinkedin size={25}></FaLinkedin></span>
             </div></a>
 
-            <a target='_blank' href="https://www.messenger.com/t/101277466406447"><div>
+            <a target='_blank' href="https://github.com/ShakilJoy31"><div>
                 <span className='flex items-center justify-center mt-1'><FaGithub size={25}></FaGithub></span>
             </div></a>
 
@@ -140,10 +141,10 @@ const Navbar = () => {
                         {
                             links.map((link, index) => {
                                 return (
-                                    <motion.div key={index} variants={listItemVariants}>
-                                        <Link href={link.url} key={index}>
+                                    <motion.div className="w-full" key={index} variants={listItemVariants}>
+                                        <p className="flex justify-center" onClick={()=> router.push(link.url)} key={index}>
                                             {link.title}
-                                        </Link>
+                                        </p>
                                     </motion.div>
                                 )
                             })
@@ -151,31 +152,9 @@ const Navbar = () => {
                     </motion.div>
                 )
             }
-
         </div>
 
     </div>)
 }
 
 export default Navbar;
-
-
-
-
-
-// <div className="flex justify-between items-center">
-//             <div className="flex gap-x-3">
-//                 <TheButton>Home</TheButton>
-//                 <TheButton>About</TheButton>
-//                 <TheButton>Projects</TheButton>
-//                 <TheButton>Blogs</TheButton>
-//             </div>
-
-//             <div>
-//                 <p>Paragraph</p>
-//             </div>
-
-//             <div>
-//                 <p>The icons</p>
-//             </div>
-//         </div>

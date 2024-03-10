@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from 'framer-motion'
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -21,24 +22,13 @@ export default function Home() {
         <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center pt-[400px] md:pt-0 lg:pt-0 xl:pt-0">
           <h1 className="text-4xl md:text-6xl font-bold w-full flex justify-start">Shakidul Islam Shakil</h1>
 
-          <p className="text-slate-300">Hello there! I am Shakidul Islam Shakil, a web application developer with a passion for crafting awesome digital experiences. I started my journey as an intern at Kylo Apps, where I learned the ropes of full-stack development. After a year of hard working, I landed a sweet gig as a front-end developer at Translanse Pvt Ltd. I`&apos;`m always eager to stay on top of the latest trends and technologies in web development, so I can bring fresh ideas to the table. I thrive in fast-paced environments where I can put my skills to the test and make a real impact. <br /> Let`&apos;`s work together to create something amazing!</p>
+          <p className="text-slate-300">"Hi! I`&apos;`m Shakidul Islam Shakil, a web developer passionate about crafting digital experiences. I began as an intern at Kylo Apps, mastering full-stack development. After a year, I joined Translanse Pvt Ltd as a front-end developer. I'm dedicated to staying updated on the latest web technologies to bring fresh ideas. Thriving in fast-paced environments, I enjoy putting my skills to the test. Let`&apos;`s work together to create something amazing!"</p>
           <div className="flex gap-4 flex-start w-full">
-            <button className="px-4 py-2 rounded-sm ring-black border border-white">Checkout my work</button>
-            <button className="px-4 py-2 rounded-sm ring-black bg-white text-black">Contact with me</button>
+            <Link href="/portfolio" className="px-4 py-2 rounded-sm ring-black border border-white">Checkout my work</Link>
+            <Link href="/contact" className="px-4 py-2 rounded-sm ring-black bg-white text-black">Contact with me</Link>
           </div>
         </div>
       </div>
     </motion.div>
   );
 }
-
-
-
-// <Image
-//           className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-//           src="/next.svg"
-//           alt="Next.js Logo"
-//           width={180}
-//           height={37}
-//           priority
-//         />
